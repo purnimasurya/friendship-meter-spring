@@ -7,6 +7,30 @@
 	"item": [
 		{
 			"name": "Reverse name - Jimin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "62265ae8-dcae-4031-bce7-aa0a4f2641f5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Check name key\", function () {",
+							"    pm.expect(jsonData).to.have.property('name');",
+							"});",
+							"",
+							"pm.test(\"Check reverse name key\", function () {",
+							"    pm.expect(jsonData).to.have.property('reverse_name');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -32,6 +56,32 @@
 		},
 		{
 			"name": "Base API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "251359e7-d7f0-4660-8118-5fcf8288c7c9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"var jsonData = pm.response.json();",
+							"",
+							"//console.log(jsonData);",
+							"",
+							"pm.test(\"Check india key\", function () {",
+							"    pm.expect(jsonData).to.have.property('india');",
+							"});",
+							"",
+							"pm.test(\"Check canada key\", function () {",
+							"    pm.expect(jsonData).to.have.property('canada');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
