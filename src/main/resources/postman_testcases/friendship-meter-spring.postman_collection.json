@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "a3472fe7-a8f1-464a-8f89-57d2fc6c7f56",
+		"name": "friendship-meter-spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reverse name - Jimin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reverse?name=Jimin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reverse"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Jimin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Base API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
